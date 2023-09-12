@@ -1,4 +1,4 @@
-import pprint
+import pprint, string
 
 
 # My Method
@@ -54,7 +54,6 @@ def main():
     fo.close()
 
 
-main()
 
 
 # Testing:
@@ -69,3 +68,9 @@ pattern3 = createWordPattern(word3)
 print(f"{word1} -> {pattern1}")
 print(f"{word2} -> {pattern2}")
 print(f"{word3} -> {pattern3}")
+
+
+def decryptMessage(cipher, rand_key):
+    decryption_table = str.maketrans(rand_key, string.ascii_lowercase)
+    plain_text = cipher.translate(decryption_table)
+    return plain_text

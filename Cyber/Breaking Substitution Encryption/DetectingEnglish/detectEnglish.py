@@ -51,6 +51,7 @@ def isEnglish(msg, wordPercentage=80, letterPercentage=80):
 
     return False
 
+
 # Gal's Method
 def isEnglish_v2(msg, wordPercentage=20, letterPercentage=80):
     wordsMatch = getEnglishCount(msg) * 100 >= wordPercentage

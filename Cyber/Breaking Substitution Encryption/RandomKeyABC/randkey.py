@@ -1,7 +1,6 @@
 import random
 import string
 
-
 def getRandKey():
     alphabet = list(string.ascii_lowercase)
     random.shuffle(alphabet)
@@ -21,7 +20,7 @@ def decryptMessage(cipher, rand_key):
     return plaintext
 
 
-plaintext = "This is a secret message."
+plaintext = "Codes operated by substituting according to a large codebook which linked a random string of characters or numbers to a word or phrase. For example, UQJHSE could be the code for Proceed to the following coordinates. When using a cipher the original information is known as plaintext, and the encrypted form as ciphertext. The ciphertext message contains all the information of the plaintext message, but is not in a format readable by a human or computer without the proper mechanism to decrypt it."
 key = getRandKey()
 
 # Encrypt the message
@@ -33,3 +32,4 @@ print("Encrypted Message:", encrypted_message)
 decrypted_message = decryptMessage(encrypted_message, key)
 print("Decrypted Message:", decrypted_message)
 print("Key:", key)
+
