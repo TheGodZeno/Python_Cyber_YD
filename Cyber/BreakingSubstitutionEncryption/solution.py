@@ -1,4 +1,4 @@
-import os, re, copy, pprint, string, AllPossibleKeys, SubstitutionCipher, WordPattern, allWordPatternDict
+import re, copy, pprint, string, AllPossibleKeys, SubstitutionCipher, WordPattern, allWordPatternDict
 
 KEY = ''
 LETTERS = string.ascii_uppercase
@@ -82,7 +82,7 @@ def break_substitution_cipher(message):
 
 
 def decrypt_cipher_with_final_letter_map(cipher_text, letter_map):
-    global KEY  # Declare KEY as a global variable
+    global KEY
     key = ['?'] * len(LETTERS)
     for cipher_letter in LETTERS:
         if len(letter_map[cipher_letter]) == 1:
