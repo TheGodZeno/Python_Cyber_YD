@@ -5,7 +5,8 @@ LETTERS = string.ascii_uppercase
 cleanPattern = re.compile('[^A-Z\s]')
 
 
-# key: pgkatwylzovdunirbxhqmesfcj
+# key for repr's: pgkatwylzovdunirbxhqmesfcj
+# GLEB SHURIN
 
 def main():
     encrypted_message = 'Kiath irtxpqta gc hmghqzqmqzny pkkixazny qi p dpxyt kiatgiiv slzkl dznvta p xpnaiu hqxzny iw klpxpkqtxh ix nmugtxh qi p sixa ix rlxpht. Wix tfpurdt, "MBOLHT" kimda gt qlt kiat wix "Rxiktta qi qlt widdiszny kiixaznpqth." Sltn mhzny p kzrltx qlt ixzyznpd znwixupqzin zh vnisn ph rdpznqtfq, pna qlt tnkxcrqta wixu ph kzrltxqtfq. Qlt kzrltxqtfq uthhpyt kinqpznh pdd qlt znwixupqzin iw qlt rdpznqtfq uthhpyt, gmq zh niq zn p wixupq xtpapgdt gc p lmupn ix kiurmqtx szqlimq qlt rxirtx utklpnzhu qi atkxcrq zq.'
@@ -19,6 +20,11 @@ def main():
     print(encrypted_message)
     print()
     print(decrypt_cipher_with_final_letter_map(encrypted_message, letter_map))
+    print()
+    print('A list with possible keys as a solution:')
+    keys = AllPossibleKeys.generate_keys_with_missing_letters(KEY)
+    for key in enumerate(keys):
+        print(key)
 
 
 def create_empty_letter_map():
@@ -104,8 +110,3 @@ def decrypt_cipher_with_final_letter_map(cipher_text, letter_map):
 
 if __name__ == '__main__':
     main()
-    print()
-    print('A list with possible keys as a solution:')
-    keys = AllPossibleKeys.generate_keys_with_missing_letters(KEY)
-    for key in enumerate(keys):
-        print(key)

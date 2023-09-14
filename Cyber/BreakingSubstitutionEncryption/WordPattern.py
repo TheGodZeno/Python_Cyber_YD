@@ -2,7 +2,7 @@ import pprint
 
 
 def createWordPattern(word):
-    word = word.upper()  # Convert the word to uppercase for consistency
+    word = word.upper()
     nextNum = 0
     letterNums = {}
     wordPattern = []
@@ -18,7 +18,7 @@ def createWordPattern(word):
 
 def main():
     all_patterns = {}
-    # Change path accordingly
+    # לשנות אם צריך
     fo = open('dictionary.txt')
     wordList = fo.read().split('\n')
     fo.close()
