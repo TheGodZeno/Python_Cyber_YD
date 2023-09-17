@@ -29,7 +29,7 @@ def encrypt_message(key, message):
 
 
 def main():
-    # myMessage = 'Cenoonommstmme oo snnio. s s c'
+    # 'Cenoonommstmme oo snnio. s s c'
     message = 'Common sense is not so common.'
     key = 8
 
